@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Twitch from './Twitch';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -10,7 +10,7 @@ import 'semantic-ui-css/semantic.min.css';
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <Twitch />
+      <App />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

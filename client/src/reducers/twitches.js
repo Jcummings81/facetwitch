@@ -4,7 +4,7 @@ const ADD_TWITCH = 'ADD_TWITCH'
 const UPDATE_TWITCH = 'UPDATE_TWITCH'
 const DELETE_TWITCH = 'DELETE_TWITCH'
 
-export const getTwitches = () => {
+export const getTwitches = (cb) => {
     return(dispatch) => {
         axios.get('api/twitches')
             .then( res => dispatch({type: TWITCHES, twitches: res.data}))
@@ -48,7 +48,7 @@ export default (state = [], action ) => {
             })
         case DELETE_TWITCH:
             return state.filter( t => t.id !== action.id )
-        default
-            return state;
+        default:
+            return state
     }
 }
