@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+50.times do
+    Twitch.create(
+        post: Faker::Lorem.paragraph(2),
+        liked: false
+    )
+end
